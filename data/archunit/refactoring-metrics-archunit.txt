@@ -1,0 +1,175 @@
+refactoring-metrics-archunit
+
+[ 01:46 ] diogomasc on ../tcc/api on 󰘬 refactoring-metrics [?] via 󰬷 v21.0.11 
+❯ ./mvnw test -Dtest="ValidacaoArquiteturalTest" -Dsurefire.useFile=false
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< org.springframework.samples:spring-petclinic-rest >----------
+[INFO] Building spring-petclinic-rest 4.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-java) @ spring-petclinic-rest ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ spring-petclinic-rest ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- jacoco:0.8.14:prepare-agent (prepare-agent) @ spring-petclinic-rest ---
+[INFO] argLine set to -javaagent:/home/diogomasc/.m2/repository/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar=destfile=/home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/jacoco.exec,excludes=**/org/springframework/samples/petclinic/rest/dto/**:**/org/springframework/samples/petclinic/rest/api/**
+[INFO] 
+[INFO] --- openapi-generator:7.22.0:generate (default) @ spring-petclinic-rest ---
+[INFO] Generating with dryRun=false
+[INFO] OpenAPI Generator: spring (server)
+[INFO] Generator 'spring' is considered stable.
+[INFO] ----------------------------------
+[INFO] Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
+[INFO] NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
+[INFO] Invoker Package Name, originally not set, is now derived from api package name: org.springframework.samples.petclinic.rest
+[INFO] Defaulting includeHttpRequestContext to 'false' for blocking
+[INFO] Processing operation failingRequest
+[INFO] Processing operation listOwners
+[INFO] Processing operation addOwner
+[INFO] Processing operation listOwnersPage
+[INFO] Processing operation getOwner
+[INFO] Processing operation updateOwner
+[INFO] Processing operation deleteOwner
+[INFO] Processing operation addPetToOwner
+[INFO] Processing operation getOwnersPet
+[INFO] Processing operation updateOwnersPet
+[INFO] Processing operation addVisitToOwner
+[INFO] Processing operation listPetTypes
+[INFO] Processing operation addPetType
+[INFO] Processing operation getPetType
+[INFO] Processing operation updatePetType
+[INFO] Processing operation deletePetType
+[INFO] Processing operation listPets
+[INFO] Processing operation getPet
+[INFO] Processing operation updatePet
+[INFO] Processing operation deletePet
+[INFO] Processing operation listVisits
+[INFO] Processing operation addVisit
+[INFO] Processing operation getVisit
+[INFO] Processing operation updateVisit
+[INFO] Processing operation deleteVisit
+[INFO] Processing operation listSpecialties
+[INFO] Processing operation addSpecialty
+[INFO] Processing operation getSpecialty
+[INFO] Processing operation updateSpecialty
+[INFO] Processing operation deleteSpecialty
+[INFO] Processing operation listVets
+[INFO] Processing operation addVet
+[INFO] Processing operation getVet
+[INFO] Processing operation updateVet
+[INFO] Processing operation deleteVet
+[INFO] Processing operation addUser
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/OwnerDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/OwnerFieldsDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/OwnerPageDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/PetDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/PetFieldsDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/PetTypeDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/PetTypeFieldsDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/ProblemDetailDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/RoleDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/SpecialtyDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/UserDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/ValidationMessageDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/VetDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/VetFieldsDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/VisitDto.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/dto/VisitFieldsDto.java
+[WARNING] No application/json content media type found in response. Response examples can currently only be generated for application/json media type.
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/OopsApi.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/OwnersApi.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/PetsApi.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/PettypesApi.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/SpecialtiesApi.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/UsersApi.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/V2Api.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/VetsApi.java
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/VisitsApi.java
+[INFO] Skipping generation of Webhooks.
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/pom.xml
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/README.md
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java/org/springframework/samples/petclinic/rest/api/ApiUtil.java
+[INFO] Skipped /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/.openapi-generator-ignore (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/.openapi-generator/VERSION
+[INFO] writing file /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/.openapi-generator/FILES
+############################################################################################
+# Thanks for using OpenAPI Generator.                                                      #
+# We appreciate your support! Please consider donation to help us maintain this project.   #
+# https://opencollective.com/openapi_generator/donate                                      #
+############################################################################################
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-source (add-source) @ spring-petclinic-rest ---
+[INFO] Source directory: /home/diogomasc/Documentos/workspace/ws-ifba/tcc/api/target/generated-sources/openapi/src/main/java added.
+[INFO] 
+[INFO] --- spring-boot:4.0.6:build-info (default) @ spring-petclinic-rest ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ spring-petclinic-rest ---
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] Copying 15 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ spring-petclinic-rest ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 112 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ spring-petclinic-rest ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ spring-petclinic-rest ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 22 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.5.5:test (default-test) @ spring-petclinic-rest ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running Validação Arquitetural – ISO 25010
+INFO  PluginLoader - Detected Java version 21.0.11
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║       MÉTRICAS DE ACOPLAMENTO POR PACOTE – ISO 25010 (Manutenibilidade)    ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ Pacote                                   │     Ca │     Ce │      I │      A ║
+╠──────────────────────────────────────────┼────────┼────────┼────────┼────────╣
+║ rest                                     │      1 │      3 │  0,750 │  0,263 ║
+║ security                                 │      0 │      0 │  1,000 │  0,000 ║
+║ util                                     │      1 │      1 │  0,500 │  0,500 ║
+║ service                                  │      1 │      2 │  0,667 │  0,500 ║
+║ mapper                                   │      1 │      2 │  0,667 │  0,500 ║
+║ model                                    │      5 │      0 │  0,000 │  0,000 ║
+║ repository                               │      1 │      2 │  0,667 │  0,462 ║
+║ config                                   │      0 │      0 │  1,000 │  0,000 ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ Ca = Acoplamento Aferente (Fan-In)  | Ce = Acoplamento Eferente (Fan-Out)  ║
+║ I  = Instabilidade (Ce/(Ca+Ce))     | A  = Abstração                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.097 s -- in Validação Arquitetural – ISO 25010
+[INFO] Running Validação Arquitetural – ISO 25010
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.434 s -- in Validação Arquitetural – ISO 25010
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.211 s
+[INFO] Finished at: 2026-07-11T01:46:54-03:00
+[INFO] ------------------------------------------------------------------------
+
+[ 01:46 ] diogomasc on ../tcc/api on 󰘬 refactoring-metrics [?] via 󰬷 v21.0.11 
+❯ 

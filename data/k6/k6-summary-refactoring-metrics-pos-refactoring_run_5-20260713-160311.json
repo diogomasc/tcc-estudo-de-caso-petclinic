@@ -1,0 +1,940 @@
+{
+  "meta": {
+    "gerado_em": "2026-07-13T20:12:02.912Z",
+    "executor": "constant-arrival-rate",
+    "rate_por_segundo": 26,
+    "duracao": "12m",
+    "preAllocatedVUs": 100,
+    "maxVUs": 300
+  },
+  "resumo_por_endpoint": {
+    "GET /owners": {
+      "latencia_ms": {
+        "count": null,
+        "avg": 5774.19,
+        "min": 2.54,
+        "med": 4885.75,
+        "max": 34283.32,
+        "p90": 13203.41,
+        "p95": 15775.44,
+        "p99": null
+      },
+      "erro": {
+        "rate": 0.000141,
+        "fails": 7113,
+        "passes": 1
+      }
+    },
+    "POST /owners": {
+      "latencia_ms": {
+        "count": null,
+        "avg": 3320.67,
+        "min": 0.75,
+        "med": 2053.22,
+        "max": 27665.1,
+        "p90": 8291.63,
+        "p95": 10854.63,
+        "p99": null
+      },
+      "erro": {
+        "rate": 0,
+        "fails": 7114,
+        "passes": 0
+      }
+    },
+    "GET /owners/{ownerId}": {
+      "latencia_ms": {
+        "count": null,
+        "avg": 3262.55,
+        "min": 0.68,
+        "med": 1974.76,
+        "max": 34122.6,
+        "p90": 8248.12,
+        "p95": 10589.19,
+        "p99": null
+      },
+      "erro": {
+        "rate": 0.000141,
+        "fails": 7112,
+        "passes": 1
+      }
+    },
+    "POST /owners/{ownerId}/pets": {
+      "latencia_ms": {
+        "count": null,
+        "avg": 3900.73,
+        "min": 1.17,
+        "med": 2533.74,
+        "max": 30157.4,
+        "p90": 10075.76,
+        "p95": 12361.96,
+        "p99": null
+      },
+      "erro": {
+        "rate": 0,
+        "fails": 7112,
+        "passes": 0
+      }
+    },
+    "POST /owners/{ownerId}/pets/{petId}/visits": {
+      "latencia_ms": {
+        "count": null,
+        "avg": 3314.63,
+        "min": 0.92,
+        "med": 2119.46,
+        "max": 27582,
+        "p90": 8335.69,
+        "p95": 10755.56,
+        "p99": null
+      },
+      "erro": {
+        "rate": 0,
+        "fails": 7112,
+        "passes": 0
+      }
+    },
+    "GET /vets": {
+      "latencia_ms": {
+        "count": null,
+        "avg": 914.35,
+        "min": 0.51,
+        "med": 540.44,
+        "max": 4678.5,
+        "p90": 2400.37,
+        "p95": 2824.74,
+        "p99": null
+      },
+      "erro": {
+        "rate": 0,
+        "fails": 7107,
+        "passes": 0
+      }
+    },
+    "GET /actuator/health": {
+      "latencia_ms": {
+        "count": null,
+        "avg": 3611.6,
+        "min": 0.85,
+        "med": 2282.4,
+        "max": 32384.02,
+        "p90": 9402.94,
+        "p95": 11838.81,
+        "p99": null
+      },
+      "erro": null
+    }
+  },
+  "global": {
+    "http_req_duration": {
+      "count": null,
+      "avg": 3443.31,
+      "min": 0,
+      "med": 1903.96,
+      "max": 34283.32,
+      "p90": 9352.89,
+      "p95": 11847.21,
+      "p99": null
+    },
+    "taxa_erro_global": {
+      "rate": 0.00004,
+      "fails": 49771,
+      "passes": 2
+    },
+    "dropped_iterations": {
+      "count": 11878,
+      "rate": 15.51504567565065
+    },
+    "counters": {
+      "owners_criados_com_sucesso": 7114,
+      "pets_criados_com_sucesso": 7112,
+      "visits_criadas_com_sucesso": 7112
+    }
+  },
+  "threshold_status": {
+    "GET /owners": {
+      "p(95)<4000": false,
+      "p(99)<5000": false
+    },
+    "POST /owners": {
+      "p(95)<3000": false,
+      "p(99)<4000": false
+    },
+    "GET /owners/{id}": {
+      "p(95)<3000": false,
+      "p(99)<4000": false
+    },
+    "POST /pets": {
+      "p(95)<3000": false,
+      "p(99)<4000": false
+    },
+    "POST /visits": {
+      "p(95)<3000": false,
+      "p(99)<4000": false
+    },
+    "GET /vets": {
+      "p(95)<2000": false,
+      "p(99)<3000": false
+    }
+  },
+  "raw": {
+    "root_group": {
+      "groups": [
+        {
+          "checks": [
+            {
+              "passes": 7123,
+              "fails": 1,
+              "name": "listar-owners: status 200",
+              "path": "::GET /owners::listar-owners: status 200",
+              "id": "a1152250b66048758d515efe580f8047"
+            },
+            {
+              "name": "listar-owners: body é array",
+              "path": "::GET /owners::listar-owners: body é array",
+              "id": "088ddfe3dac951b4c2287b4fda1ed455",
+              "passes": 7119,
+              "fails": 1
+            },
+            {
+              "id": "8f83279597f37aa630b330ad02a44071",
+              "passes": 7113,
+              "fails": 1,
+              "name": "listar-owners: array não-vazio",
+              "path": "::GET /owners::listar-owners: array não-vazio"
+            }
+          ],
+          "name": "GET /owners",
+          "path": "::GET /owners",
+          "id": "34c63b0a1bc4fb7e375a89ac165c0e5b",
+          "groups": []
+        },
+        {
+          "id": "db2ceb843fe8a15b672b0c6a36a34451",
+          "groups": [],
+          "checks": [
+              {
+                "id": "2e1b8aca1f5cc8d4315277cc9def33f6",
+                "passes": 7114,
+                "fails": 0,
+                "name": "criar-owner: status 201",
+                "path": "::POST /owners::criar-owner: status 201"
+              },
+              {
+                "name": "criar-owner: body tem id",
+                "path": "::POST /owners::criar-owner: body tem id",
+                "id": "84175cd70d6161d9aee75f89d624e311",
+                "passes": 7114,
+                "fails": 0
+              }
+            ],
+          "name": "POST /owners",
+          "path": "::POST /owners"
+        },
+        {
+          "id": "55bc13790c80e005d3d144a7282f5b1a",
+          "groups": [],
+          "checks": [
+              {
+                "passes": 7112,
+                "fails": 1,
+                "name": "consultar-owner: status 200",
+                "path": "::GET /owners/{ownerId}::consultar-owner: status 200",
+                "id": "c777ef5d5a95154bdb6378867bc3970c"
+              },
+              {
+                "name": "consultar-owner: tem firstName",
+                "path": "::GET /owners/{ownerId}::consultar-owner: tem firstName",
+                "id": "0bf8f90a92bfd5af9479309568f1bfc0",
+                "passes": 7112,
+                "fails": 1
+              }
+            ],
+          "name": "GET /owners/{ownerId}",
+          "path": "::GET /owners/{ownerId}"
+        },
+        {
+          "name": "POST /owners/{ownerId}/pets",
+          "path": "::POST /owners/{ownerId}/pets",
+          "id": "a061d12184a10ee7a2d514de2a20416f",
+          "groups": [],
+          "checks": [
+              {
+                "passes": 7112,
+                "fails": 0,
+                "name": "criar-pet: status 201",
+                "path": "::POST /owners/{ownerId}/pets::criar-pet: status 201",
+                "id": "d7334b9de7e2e47bee1fe1e9a590adb1"
+              },
+              {
+                "id": "40d272b52ef631acebdd815b8dcf0aa2",
+                "passes": 7112,
+                "fails": 0,
+                "name": "criar-pet: body tem id",
+                "path": "::POST /owners/{ownerId}/pets::criar-pet: body tem id"
+              }
+            ]
+        },
+        {
+          "path": "::POST /owners/{ownerId}/pets/{petId}/visits",
+          "id": "9d127835a10ba500d5e64dace88fb7b1",
+          "groups": [],
+          "checks": [
+              {
+                "name": "criar-visit: status 201",
+                "path": "::POST /owners/{ownerId}/pets/{petId}/visits::criar-visit: status 201",
+                "id": "b95d93662cf09020f0a1975e043eb746",
+                "passes": 7112,
+                "fails": 0
+              },
+              {
+                "fails": 0,
+                "name": "criar-visit: body tem id",
+                "path": "::POST /owners/{ownerId}/pets/{petId}/visits::criar-visit: body tem id",
+                "id": "ea9c067ce7b079b6187c20904da2872c",
+                "passes": 7112
+              }
+            ],
+          "name": "POST /owners/{ownerId}/pets/{petId}/visits"
+        },
+        {
+          "name": "GET /vets",
+          "path": "::GET /vets",
+          "id": "1754c776a5d4eecad93a82e5002a1b3c",
+          "groups": [],
+          "checks": [
+              {
+                "name": "listar-vets: status 200",
+                "path": "::GET /vets::listar-vets: status 200",
+                "id": "6041532d2b636d63065aaeb76f26c3c7",
+                "passes": 7107,
+                "fails": 0
+              }
+            ]
+        },
+        {
+          "name": "GET /actuator/health",
+          "path": "::GET /actuator/health",
+          "id": "0f37e39555a8cf4ebdef11c257e45757",
+          "groups": [],
+          "checks": [
+              {
+                "name": "health: status 200",
+                "path": "::GET /actuator/health::health: status 200",
+                "id": "6648c6ad7b356c7c9e4449b91458c4b8",
+                "passes": 7101,
+                "fails": 0
+              }
+            ]
+        }
+      ],
+      "checks": [],
+      "name": "",
+      "path": "",
+      "id": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "options": {
+      "summaryTrendStats": [
+        "avg",
+        "min",
+        "med",
+        "max",
+        "p(90)",
+        "p(95)"
+      ],
+      "summaryTimeUnit": "",
+      "noColor": false
+    },
+    "state": {
+      "isStdOutTTY": false,
+      "isStdErrTTY": false,
+      "testRunDurationMs": 765579.441293
+    },
+    "metrics": {
+      "latencia_criar_pet": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 3900.7287805816904,
+          "min": 1.170679,
+          "med": 2533.7438235,
+          "max": 30157.402644,
+          "p(90)": 10075.756533500004,
+          "p(95)": 12361.95547975
+        }
+      },
+      "dropped_iterations": {
+        "type": "counter",
+        "contains": "default",
+        "values": {
+          "count": 11878,
+          "rate": 15.51504567565065
+        }
+      },
+      "http_req_tls_handshaking": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 0,
+          "min": 0,
+          "med": 0,
+          "max": 0,
+          "p(90)": 0,
+          "p(95)": 0
+        }
+      },
+      "checks": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0.9999459272396938,
+          "passes": 92463,
+          "fails": 5
+        }
+      },
+      "latencia_consultar_owner": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "p(90)": 8248.1194782,
+          "p(95)": 10589.190970399999,
+          "avg": 3262.5513016197115,
+          "min": 0.676909,
+          "med": 1974.760083,
+          "max": 34122.600923
+        }
+      },
+      "http_req_sending": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "min": 0,
+          "med": 0.051427,
+          "max": 1761.759588,
+          "p(90)": 0.3837421999999999,
+          "p(95)": 1.5058915999999938,
+          "avg": 5.119414514030386
+        }
+      },
+      "http_reqs": {
+        "type": "counter",
+        "contains": "default",
+        "values": {
+          "rate": 65.02917569980364,
+          "count": 49785
+        }
+      },
+      "latencia_criar_owner{phase:test}": {
+        "values": {
+          "p(95)": 10968.653929699987,
+          "avg": 3466.267823954364,
+          "min": 0.74919,
+          "med": 2294.783113,
+          "max": 27665.102712,
+          "p(90)": 8443.497087800004
+        },
+        "thresholds": {
+          "p(99)<4000": {
+            "ok": false
+          },
+          "p(95)<3000": {
+            "ok": false
+          }
+        },
+        "type": "trend",
+        "contains": "time"
+      },
+      "http_req_blocked": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "p(90)": 0.025181799999999997,
+          "p(95)": 0.03235399999999998,
+          "avg": 0.4990369286331167,
+          "min": 0,
+          "med": 0.015504,
+          "max": 934.191953
+        }
+      },
+      "iteration_duration": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "min": 1329.096446,
+          "med": 27709.540126,
+          "max": 111908.972284,
+          "p(90)": 56393.86368400001,
+          "p(95)": 63151.29776519999,
+          "avg": 27675.995005384117
+        }
+      },
+      "erro_listar_owners": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0.0001405678942929435,
+          "passes": 1,
+          "fails": 7113
+        }
+      },
+      "pets_criados_com_sucesso": {
+        "type": "counter",
+        "contains": "default",
+        "values": {
+          "count": 7112,
+          "rate": 9.289695642804128
+        }
+      },
+      "erro_criar_visit{phase:test}": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 6813
+        },
+        "thresholds": {
+          "rate<0.10": {
+            "ok": true
+          }
+        }
+      },
+      "http_req_duration": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 3443.3070784736656,
+          "min": 0,
+          "med": 1903.964345,
+          "max": 34283.321196,
+          "p(90)": 9352.8874732,
+          "p(95)": 11847.210170999993
+        },
+        "thresholds": {
+          "p(95)<5000": {
+            "ok": false
+          }
+        }
+      },
+      "group_duration": {
+        "values": {
+          "med": 1966.624021,
+          "max": 34931.203711,
+          "p(90)": 10274.439209000002,
+          "p(95)": 12730.288069399994,
+          "avg": 3734.5929710225787,
+          "min": 0.60025
+        },
+        "type": "trend",
+        "contains": "time"
+      },
+      "erro_consultar_owner": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0.00014058765640376775,
+          "passes": 1,
+          "fails": 7112
+        }
+      },
+      "latencia_criar_owner": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "min": 0.74919,
+          "med": 2053.220318,
+          "max": 27665.102712,
+          "p(90)": 8291.631266699998,
+          "p(95)": 10854.62913384998,
+          "avg": 3320.6707071058463
+        }
+      },
+      "erro_criar_owner{phase:test}": {
+        "values": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 6815
+        },
+        "thresholds": {
+          "rate<0.10": {
+            "ok": true
+          }
+        },
+        "type": "rate",
+        "contains": "default"
+      },
+      "http_req_connecting": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 0.3591655717585617,
+          "min": 0,
+          "med": 0,
+          "max": 335.700369,
+          "p(90)": 0,
+          "p(95)": 0
+        }
+      },
+      "latencia_listar_vets{phase:test}": {
+        "thresholds": {
+          "p(95)<2000": {
+            "ok": false
+          },
+          "p(99)<3000": {
+            "ok": false
+          }
+        },
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 954.4554317886324,
+          "min": 0.51263,
+          "med": 617.528044,
+          "max": 4678.499974,
+          "p(90)": 2431.8475590000003,
+          "p(95)": 2842.3882318999995
+        }
+      },
+      "latencia_listar_owners": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "med": 4885.7513865,
+          "max": 34283.321196,
+          "p(90)": 13203.4126759,
+          "p(95)": 15775.441190799995,
+          "avg": 5774.190145610898,
+          "min": 2.535334
+        }
+      },
+      "http_req_receiving": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "p(90)": 168.3133576,
+          "p(95)": 389.3398203999998,
+          "avg": 53.61097941651146,
+          "min": 0,
+          "med": 0.410919,
+          "max": 3024.146085
+        }
+      },
+      "owners_criados_com_sucesso": {
+        "contains": "default",
+        "values": {
+          "rate": 9.292308043153623,
+          "count": 7114
+        },
+        "type": "counter"
+      },
+      "erro_criar_owner": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "fails": 7114,
+          "rate": 0,
+          "passes": 0
+        }
+      },
+      "http_req_waiting": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 3384.576684543095,
+          "min": 0,
+          "med": 1837.17702,
+          "max": 34282.354899,
+          "p(90)": 9201.592887199995,
+          "p(95)": 11682.198479399998
+        }
+      },
+      "erro_listar_vets": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 7107
+        }
+      },
+      "data_sent": {
+        "values": {
+          "rate": 12426.180076012686,
+          "count": 9513228
+        },
+        "type": "counter",
+        "contains": "data"
+      },
+      "erro_criar_visit": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "passes": 0,
+          "fails": 7112,
+          "rate": 0
+        }
+      },
+      "latencia_listar_owners{phase:test}": {
+        "values": {
+          "p(95)": 15951.837253799997,
+          "avg": 6026.890525571141,
+          "min": 6.628579,
+          "med": 5206.703988,
+          "max": 34283.321196,
+          "p(90)": 13380.9045944
+        },
+        "thresholds": {
+          "p(95)<4000": {
+            "ok": false
+          },
+          "p(99)<5000": {
+            "ok": false
+          }
+        },
+        "type": "trend",
+        "contains": "time"
+      },
+      "visits_criadas_com_sucesso": {
+        "contains": "default",
+        "values": {
+          "rate": 9.289695642804128,
+          "count": 7112
+        },
+        "type": "counter"
+      },
+      "http_req_failed": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0.00006025911419102139,
+          "passes": 3,
+          "fails": 49782
+        }
+      },
+      "erro_listar_owners{phase:test}": {
+        "values": {
+          "rate": 0.0001467351430667645,
+          "passes": 1,
+          "fails": 6814
+        },
+        "thresholds": {
+          "rate<0.10": {
+            "ok": true
+          }
+        },
+        "type": "rate",
+        "contains": "default"
+      },
+      "latencia_listar_vets": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 914.3516897503882,
+          "min": 0.51263,
+          "med": 540.442097,
+          "max": 4678.499974,
+          "p(90)": 2400.3665468000004,
+          "p(95)": 2824.7368690999997
+        }
+      },
+      "vus": {
+        "type": "gauge",
+        "contains": "default",
+        "values": {
+          "max": 300,
+          "value": 12,
+          "min": 0
+        }
+      },
+      "erro_criar_pet": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 7112
+        }
+      },
+      "latencia_criar_pet{phase:test}": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "avg": 4071.801829331569,
+          "min": 1.170679,
+          "med": 2831.749449,
+          "max": 30157.402644,
+          "p(90)": 10242.658427800001,
+          "p(95)": 12502.891985999993
+        },
+        "thresholds": {
+          "p(95)<3000": {
+            "ok": false
+          },
+          "p(99)<4000": {
+            "ok": false
+          }
+        }
+      },
+      "latencia_criar_visit{phase:test}": {
+        "contains": "time",
+        "values": {
+          "max": 27582.004921,
+          "p(90)": 8433.247478,
+          "p(95)": 10904.495286799996,
+          "avg": 3460.0151308662894,
+          "min": 0.933688,
+          "med": 2321.477854
+        },
+        "thresholds": {
+          "p(95)<3000": {
+            "ok": false
+          },
+          "p(99)<4000": {
+            "ok": false
+          }
+        },
+        "type": "trend"
+      },
+      "erro_listar_vets{phase:test}": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 6808
+        },
+        "thresholds": {
+          "rate<0.10": {
+            "ok": true
+          }
+        }
+      },
+      "http_req_duration{expected_response:true}": {
+        "values": {
+          "med": 1903.9275120000002,
+          "max": 33859.633425,
+          "p(90)": 9352.620820200002,
+          "p(95)": 11845.799071799996,
+          "avg": 3442.1404720519954,
+          "min": 0.51263
+        },
+        "type": "trend",
+        "contains": "time"
+      },
+      "data_received": {
+        "type": "counter",
+        "contains": "data",
+        "values": {
+          "count": 8312148415,
+          "rate": 10857329.712200047
+        }
+      },
+      "latencia_criar_visit": {
+        "contains": "time",
+        "values": {
+          "p(90)": 8335.686138000005,
+          "p(95)": 10755.563508649995,
+          "avg": 3314.6302820206733,
+          "min": 0.915636,
+          "med": 2119.4602205,
+          "max": 27582.004921
+        },
+        "type": "trend"
+      },
+      "erro_consultar_owner{phase:test}": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0.000146756677428823,
+          "passes": 1,
+          "fails": 6813
+        },
+        "thresholds": {
+          "rate<0.10": {
+            "ok": true
+          }
+        }
+      },
+      "erro_criar_pet{phase:test}": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 6813
+        },
+        "thresholds": {
+          "rate<0.10": {
+            "ok": true
+          }
+        }
+      },
+      "latencia_consultar_owner{phase:test}": {
+        "type": "trend",
+        "contains": "time",
+        "values": {
+          "max": 34122.600923,
+          "p(90)": 8384.299251299999,
+          "p(95)": 10683.6422625,
+          "avg": 3405.6477252886716,
+          "min": 0.676909,
+          "med": 2190.423379
+        },
+        "thresholds": {
+          "p(95)<3000": {
+            "ok": false
+          },
+          "p(99)<4000": {
+            "ok": false
+          }
+        }
+      },
+      "latencia_health": {
+        "values": {
+          "p(90)": 9402.940456,
+          "p(95)": 11838.814178,
+          "avg": 3611.6024576937098,
+          "min": 0.850422,
+          "med": 2282.400518,
+          "max": 32384.019511
+        },
+        "type": "trend",
+        "contains": "time"
+      },
+      "vus_max": {
+        "type": "gauge",
+        "contains": "default",
+        "values": {
+          "value": 330,
+          "min": 130,
+          "max": 330
+        }
+      },
+      "taxa_erro": {
+        "type": "rate",
+        "contains": "default",
+        "values": {
+          "rate": 0.00004018242822413758,
+          "passes": 2,
+          "fails": 49771
+        },
+        "thresholds": {
+          "rate<0.10": {
+            "ok": true
+          }
+        }
+      },
+      "iterations": {
+        "contains": "default",
+        "values": {
+          "count": 7085,
+          "rate": 9.254428238085945
+        },
+        "type": "counter"
+      }
+    },
+    "setup_data": {
+      "actuatorUrl": "http://localhost:9966/petclinic/actuator",
+      "baseUrl": "http://localhost:9966/petclinic/api"
+    }
+  }
+}
