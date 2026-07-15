@@ -28,6 +28,19 @@ uv sync
 ```
 Isso fará o download e instalação de pacotes como `numpy`, `pandas`, `scipy`, `matplotlib`, `seaborn` e `openpyxl` diretamente na pasta `.venv` do projeto.
 
+## Dados Brutos e Reprodutibilidade
+
+Para garantir a reprodutibilidade integral dos estudos e gráficos apresentados neste repositório, é necessário baixar a massa bruta de dados dos testes de carga executados pelo **k6**.
+
+> ⚠️ **Atenção:** Como os arquivos brutos (`.csv`) são muito grandes (ultrapassando os limites do GitHub), eles foram armazenados externamente e não estão versionados no repositório.
+
+**Antes de executar os scripts ou os notebooks, siga os passos abaixo:**
+1. Acesse o repositório público de dados no Google Drive: [Massa de Dados K6 - TCC](https://drive.google.com/drive/folders/15cI5IIdX5O75ORBsvTu_a6QoTfZNlV2V?usp=sharing)
+2. Faça o download de todos os arquivos `.csv`.
+3. Coloque-os dentro do diretório `data/k6/` neste projeto.
+
+Os arquivos `.json` de sumarização já estão presentes no repositório por serem leves. Após adicionar os `.csv`, o seu ambiente estará idêntico ao ambiente do autor.
+
 ## Utilizando Jupyter Notebook
 
 O projeto já inclui a biblioteca `ipykernel` instalada. Para que o seu editor (como o VS Code, JupyterLab, etc.) reconheça o ambiente virtual do `uv` de forma nativa como um Kernel Jupyter, execute o seguinte comando:
