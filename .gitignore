@@ -41,3 +41,4 @@ Thumbs.db
 
 # K6 or Data specific (if you want to ignore raw data)
 data/k6/*.csv
+tmp/
