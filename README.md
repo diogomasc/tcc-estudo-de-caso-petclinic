@@ -36,16 +36,17 @@ Isso fará o download e instalação de pacotes como `numpy`, `pandas`, `scipy`,
 
 Para garantir a reprodutibilidade integral dos estudos e dos gráficos gerados nos cadernos, é necessário obter a massa bruta de dados dos testes de carga executados pelo **k6**.
 
-> ⚠️ **Atenção:** Com o objetivo de deixar este repositório mais leve e focado apenas na análise dos resultados, os arquivos brutos (`.csv`) pesados foram retirados do versionamento (já que também ultrapassam os limites do GitHub).
+> ⚠️ **Atenção:** Com o objetivo de deixar este repositório o mais leve possível e focado apenas na análise estatística, a pasta inteira de resultados do k6 (contendo todos os `.csv` pesados e os sumarizadores `.json`) foi retirada do versionamento.
 
-**Antes de executar os notebooks, siga os passos abaixo:**
+**Antes de executar os notebooks, siga os passos abaixo para preparar seus dados:**
 1. Acesse o repositório público de dados no Google Drive: [Massa de Dados K6 - TCC](https://drive.google.com/drive/folders/15cI5IIdX5O75ORBsvTu_a6QoTfZNlV2V?usp=sharing)
-2. Faça o download de todos os arquivos `.csv` organizados nas pastas.
-3. Extraia e coloque-os dentro dos diretórios correspondentes neste projeto:
+2. Faça o download das pastas `uv12` e `uv26` (que contêm tanto os `.csv` quanto os `.json`).
+3. No repositório local do projeto, crie a pasta `k6` dentro do diretório `data/` (o caminho final será `data/k6/`).
+4. Extraia/Cole as pastas baixadas dentro do diretório recém-criado, ficando assim:
    - `data/k6/uv12/` (Para os testes com 12 usuários virtuais)
    - `data/k6/uv26/` (Para os testes com 26 usuários virtuais)
 
-Os arquivos `.json` de sumarização do K6 já estão mantidos no repositório por serem leves. Após adicionar os `.csv`, o seu ambiente estará pronto para processar o relatório de ambos os cenários.
+Após realizar estes passos, o seu ambiente estará pronto para processar os notebooks de ambos os cenários.
 
 ## Utilizando Jupyter Notebook
 
