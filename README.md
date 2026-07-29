@@ -1,6 +1,10 @@
 # TCC - Estudo de Caso: Tratamento Estatístico e Visualização
 
-Este repositório contém a análise estatística e scripts para o processamento das métricas coletadas (k6, PMD, ArchUnit) durante a execução do TCC. O gerenciamento de dependências e ambientes virtuais é feito com a ferramenta [uv](https://github.com/astral-sh/uv).
+Este repositório é focado na análise estatística e visualização das métricas coletadas (k6, PMD, ArchUnit) durante a execução do estudo de caso do TCC. A avaliação de desempenho sob carga foi separada em dois cadernos Jupyter (notebooks) principais para facilitar o estudo de diferentes volumes de usuários simultâneos:
+- `tcc_analise_comparativa_uv12.ipynb` (12 usuários virtuais)
+- `tcc_analise_comparativa_uv26.ipynb` (26 usuários virtuais)
+
+O gerenciamento de dependências e ambientes virtuais é feito com a ferramenta [uv](https://github.com/astral-sh/uv).
 
 ## Pré-requisitos
 
@@ -30,16 +34,18 @@ Isso fará o download e instalação de pacotes como `numpy`, `pandas`, `scipy`,
 
 ## Dados Brutos e Reprodutibilidade
 
-Para garantir a reprodutibilidade integral dos estudos e gráficos apresentados neste repositório, é necessário baixar a massa bruta de dados dos testes de carga executados pelo **k6**.
+Para garantir a reprodutibilidade integral dos estudos e dos gráficos gerados nos cadernos, é necessário obter a massa bruta de dados dos testes de carga executados pelo **k6**.
 
-> ⚠️ **Atenção:** Como os arquivos brutos (`.csv`) são muito grandes (ultrapassando os limites do GitHub), eles foram armazenados externamente e não estão versionados no repositório.
+> ⚠️ **Atenção:** Com o objetivo de deixar este repositório mais leve e focado apenas na análise dos resultados, os arquivos brutos (`.csv`) pesados foram retirados do versionamento (já que também ultrapassam os limites do GitHub).
 
-**Antes de executar os scripts ou os notebooks, siga os passos abaixo:**
+**Antes de executar os notebooks, siga os passos abaixo:**
 1. Acesse o repositório público de dados no Google Drive: [Massa de Dados K6 - TCC](https://drive.google.com/drive/folders/15cI5IIdX5O75ORBsvTu_a6QoTfZNlV2V?usp=sharing)
-2. Faça o download de todos os arquivos `.csv`.
-3. Coloque-os dentro do diretório `data/k6/` neste projeto.
+2. Faça o download de todos os arquivos `.csv` organizados nas pastas.
+3. Extraia e coloque-os dentro dos diretórios correspondentes neste projeto:
+   - `data/k6/uv12/` (Para os testes com 12 usuários virtuais)
+   - `data/k6/uv26/` (Para os testes com 26 usuários virtuais)
 
-Os arquivos `.json` de sumarização já estão presentes no repositório por serem leves. Após adicionar os `.csv`, o seu ambiente estará idêntico ao ambiente do autor.
+Os arquivos `.json` de sumarização do K6 já estão mantidos no repositório por serem leves. Após adicionar os `.csv`, o seu ambiente estará pronto para processar o relatório de ambos os cenários.
 
 ## Utilizando Jupyter Notebook
 
@@ -49,7 +55,7 @@ O projeto já inclui a biblioteca `ipykernel` instalada. Para que o seu editor (
 ```bash
 uv run ipython kernel install --user --name=tcc-estudo-de-caso
 ```
-Isso criará um kernel chamado **tcc-estudo-de-caso** que você pode selecionar ao abrir o notebook `analise_estatistica_tcc.ipynb`. Ele utilizará as bibliotecas isoladas do ambiente local.
+Isso criará um kernel chamado **tcc-estudo-de-caso** que você pode selecionar ao abrir os notebooks `tcc_analise_comparativa_*.ipynb`. Ele utilizará as bibliotecas isoladas do ambiente local.
 
 ### Ativando o ambiente e selecionando o Interpretador/Kernel (VS Code / Antigravity)
 
